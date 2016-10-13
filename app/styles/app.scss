@@ -1,0 +1,8 @@
+$primary: "light-green";
+
+.md-toolbar-tools { color: white; font-weight: bold !important; }
+md-toolbar.top-toolbar md-icon {
+    color: white !important;
+}
+
+@import 'ember-paper';
