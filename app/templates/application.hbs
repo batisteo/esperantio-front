@@ -1,97 +1,32 @@
 
-  {{#paper-toolbar class="top-toolbar"}}
-    {{#paper-toolbar-tools}}
+{{#paper-toolbar class="top-toolbar"}}
+  {{#paper-toolbar-tools}}
 
-    {{#paper-sidenav-toggle name="left" class="hide-gt-sm" as |toggleAction|}}
-      {{#paper-button iconButton=true onClick=(action toggleAction)}}
-        {{paper-icon "menu"}}
-      {{/paper-button}}
-    {{/paper-sidenav-toggle}}
-      <h2>Esperant.io</h2>
-      <span class="flex"></span>
-      {{#paper-button iconButton=true}}
-        {{paper-icon "search"}}
-      {{/paper-button}}
-      {{#paper-button iconButton=true}}
-        {{paper-icon "more_vert"}}
-      {{/paper-button}}
-    {{/paper-toolbar-tools}}
-  {{/paper-toolbar}}
+  {{#paper-sidenav-toggle name="left" class="hide-gt-sm" as |toggleAction|}}
+    {{#paper-button iconButton=true onClick=(action toggleAction)}}
+      {{paper-icon "menu"}}
+    {{/paper-button}}
+  {{/paper-sidenav-toggle}}
+    <h2>Esperant.io</h2>
+    <span class="flex"></span>
+    {{#paper-button iconButton=true}}
+      {{paper-icon "search"}}
+    {{/paper-button}}
+    {{#paper-button iconButton=true}}
+      {{paper-icon "more_vert"}}
+    {{/paper-button}}
+  {{/paper-toolbar-tools}}
+{{/paper-toolbar}}
 
 {{#paper-sidenav-container class="inner-sidenav"}}
-      {{#paper-sidenav
-        class="md-whiteframe-z2"
-        name="left"
-        open=leftSideBarOpen
-        onToggle=(action (mut leftSideBarOpen))
-      }}
-        {{#paper-content}}
-          <img src="assets/images/planedo.png" alt="" width="320">
-          {{#paper-list}}
-              {{#paper-item}}
-                {{#paper-menu-item}}
-                  {{paper-icon "exit to app" class="md-menu-align-target"}}
-                  <div class="md-list-item-text">Ensaluti</div>
-                {{/paper-menu-item}}
-              {{/paper-item}}
-              {{paper-divider}}
-              {{#paper-item}}
-                {{#paper-menu-item}}
-                  {{paper-icon "map" class="md-menu-align-target"}}
-                  <div class="md-list-item-text">Mapo</div>
-                {{/paper-menu-item}}
-              {{/paper-item}}
-              {{#paper-item}}
-                {{#paper-menu-item}}
-                  {{paper-icon "date range" class="md-menu-align-target"}}
-                  <div class="md-list-item-text">Kalendaro</div>
-                {{/paper-menu-item}}
-              {{/paper-item}}
-              {{#paper-item}}
-                {{#paper-menu-item}}
-                  {{paper-icon "favorite" class="md-menu-align-target"}}
-                  <div class="md-list-item-text"><p>Miaj eventoj</p></div>
-                {{/paper-menu-item}}
-              {{/paper-item}}
-              {{paper-divider}}
-              {{#paper-item}}
-                {{#paper-menu-item}}
-                  {{paper-icon "account box" class="md-menu-align-target"}}
-                  <div class="md-list-item-text">Profilo</div>
-                {{/paper-menu-item}}
-              {{/paper-item}}
-              {{#paper-item}}
-                {{#paper-menu-item}}
-                  {{paper-icon "settings" class="md-menu-align-target"}}
-                  <div class="md-list-item-text">Agordoj</div>
-                {{/paper-menu-item}}
-              {{/paper-item}}
-              {{paper-divider}}
-              {{#paper-item}}
-                {{#paper-menu-item}}
-                  {{paper-icon "question answer" class="md-menu-align-target"}}
-                  <div class="md-list-item-text">Kontakti nin</div>
-                {{/paper-menu-item}}
-              {{/paper-item}}
-          {{/paper-list}}
-        {{/paper-content}}
-      {{/paper-sidenav}}
+  {{#paper-sidenav
+    class="md-whiteframe-z2"
+    name="left"
+    open=leftSideBarOpen
+    onToggle=(action (mut leftSideBarOpen))
+  }}
+  {{partial "main-menu"}}
+  {{/paper-sidenav}}
+  {{outlet}}
+{{/paper-sidenav-container}}
 
-      {{#paper-card-content class="flex"}}
-        <div class="layout-fill layout-align-start-center layout-column" style="height: 500px">
-          <p>
-            The left sidenav will "lock open" on a medium (>=960px wide) device.
-          </p>
-          <p>
-            Left sidenav is {{if leftSideBarOpen "opened" "closed"}}
-          </p>
-
-          {{#paper-sidenav-toggle name="left" class="hide-gt-sm" as |toggleAction|}}
-            {{#paper-button raised=true onClick=(action toggleAction)}}
-              Toggle
-            {{/paper-button}}
-          {{/paper-sidenav-toggle}}
-
-        </div>
-      {{/paper-card-content}}
-    {{/paper-sidenav-container}}

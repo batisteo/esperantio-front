@@ -16,7 +16,22 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+    firebase: {
+      apiKey: "AIzaSyB0EThxG58Yh8zRkDLzOcDQmnYXG7xd1Rw",
+      authDomain: "esperantio-alpha.firebaseapp.com",
+      databaseURL: "https://esperantio-alpha.firebaseio.com",
+      storageBucket: "",
+      messagingSenderId: "524340330862"
+    },
+
+    // if using ember-cli-content-security-policy
+    contentSecurityPolicy: {
+      'script-src': "'self' 'unsafe-eval' apis.google.com",
+      'frame-src': "'self' https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+    },
+
   };
 
   if (environment === 'development') {

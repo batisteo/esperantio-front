@@ -1,8 +1,13 @@
 $primary: "light-green";
+$accent: "light-blue";
 
 .md-toolbar-tools { color: white; font-weight: bold !important; }
-md-toolbar.top-toolbar md-icon {
-    color: white !important;
+md-toolbar.top-toolbar md-icon { color: white !important; }
+button md-icon { color: white !important; }
+.menu-header {
+    min-height: 151.5px;
+    background: url("images/planedo.png");
+    background-size: cover;
 }
 
 @import 'ember-paper';
