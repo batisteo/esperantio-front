@@ -26,5 +26,9 @@
           <p>Velencefüred</p>
         </div>
       {{/paper-item}}
+      {{paper-divider}}
+      {{#each model as |meeting|}}
+        {{meeting-item item=meeting}}
+      {{/each}}
   {{/paper-list}}
 {{/paper-card-content}}

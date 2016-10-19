@@ -1,0 +1,9 @@
+<div class="layout-row flex-wrap">
+  <div class="layout-column flex-offset-10 flex-align-center">
+    {{paper-input label="Akronimo" value=item.shortName onChange=(action (mut item.shortName))}}
+    {{paper-input label="Nomo" value=item.name onChange=(action (mut item.name))}}
+    {{paper-input label="Urbo" value=item.city onChange=(action (mut item.city))}}
+    {{paper-input label="Lando" value=item.country onChange=(action (mut item.country))}}
+    {{#paper-button onClick=(action "buttonClicked" item) raised=true primary=true}}Aldoni{{/paper-button}}
+  </div>
+</div>

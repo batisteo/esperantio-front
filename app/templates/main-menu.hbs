@@ -1,55 +1,56 @@
 
-    {{#paper-content}}
-      <div class="menu-header layout-row layout-align-end">
-        {{#paper-button raised=true fab=true accent=true}}
-          {{paper-icon "add" size=36 class="white"}}
-        {{/paper-button}}
-      </div>
-      {{#paper-list}}
-        {{#paper-item}}
-          {{#paper-menu-item}}
-            {{paper-icon "exit to app" class="md-menu-align-target"}}
-            <div class="md-list-item-text">Ensaluti</div>
-          {{/paper-menu-item}}
-        {{/paper-item}}
-        {{paper-divider}}
-        {{#paper-item}}
-          {{#paper-menu-item}}
-            {{paper-icon "map" class="md-menu-align-target"}}
-            <div class="md-list-item-text">Mapo</div>
-          {{/paper-menu-item}}
-        {{/paper-item}}
-        {{#paper-item}}
-          {{#paper-menu-item}}
-            {{paper-icon "date range" class="md-menu-align-target"}}
-            <div class="md-list-item-text">Kalendaro</div>
-          {{/paper-menu-item}}
-        {{/paper-item}}
-        {{#paper-item}}
-          {{#paper-menu-item}}
-            {{paper-icon "favorite" class="md-menu-align-target"}}
-            <div class="md-list-item-text"><p>Miaj eventoj</p></div>
-          {{/paper-menu-item}}
-        {{/paper-item}}
-        {{paper-divider}}
-        {{#paper-item}}
-          {{#paper-menu-item}}
-            {{paper-icon "account box" class="md-menu-align-target"}}
-            <div class="md-list-item-text">Profilo</div>
-          {{/paper-menu-item}}
-        {{/paper-item}}
-        {{#paper-item}}
-          {{#paper-menu-item}}
-            {{paper-icon "settings" class="md-menu-align-target"}}
-            <div class="md-list-item-text">Agordoj</div>
-          {{/paper-menu-item}}
-        {{/paper-item}}
-        {{paper-divider}}
-        {{#paper-item}}
-          {{#paper-menu-item}}
-            {{paper-icon "question answer" class="md-menu-align-target"}}
-            <div class="md-list-item-text">Kontakti nin</div>
-          {{/paper-menu-item}}
-        {{/paper-item}}
-      {{/paper-list}}
-    {{/paper-content}}
+{{#paper-content}}
+  <div class="menu-header layout-row layout-align-end">
+    {{#paper-button onClick=(action (transition-to "meetings.new")) raised=true fab=true accent=true}}
+      {{paper-icon "add" size=36 class="white"}}
+    {{/paper-button}}
+  </div>
+
+  {{#paper-list}}
+    {{#paper-item}}
+      {{#paper-menu-item}}
+        {{paper-icon "exit to app" class="md-menu-align-target"}}
+        <div class="md-list-item-text">Ensaluti</div>
+      {{/paper-menu-item}}
+    {{/paper-item}}
+    {{paper-divider}}
+    {{#paper-item}}
+      {{#paper-menu-item}}
+        {{paper-icon "map" class="md-menu-align-target"}}
+        <div class="md-list-item-text">Mapo</div>
+      {{/paper-menu-item}}
+    {{/paper-item}}
+    {{#paper-item}}
+      {{#paper-menu-item}}
+        {{paper-icon "date range" class="md-menu-align-target"}}
+        <div class="md-list-item-text">Kalendaro</div>
+      {{/paper-menu-item}}
+    {{/paper-item}}
+    {{#paper-item}}
+      {{#paper-menu-item}}
+        {{paper-icon "favorite" class="md-menu-align-target"}}
+        <div class="md-list-item-text"><p>Miaj eventoj</p></div>
+      {{/paper-menu-item}}
+    {{/paper-item}}
+    {{paper-divider}}
+    {{#paper-item}}
+      {{#paper-menu-item}}
+        {{paper-icon "account box" class="md-menu-align-target"}}
+        <div class="md-list-item-text">Profilo</div>
+      {{/paper-menu-item}}
+    {{/paper-item}}
+    {{#paper-item}}
+      {{#paper-menu-item}}
+        {{paper-icon "settings" class="md-menu-align-target"}}
+        <div class="md-list-item-text">Agordoj</div>
+      {{/paper-menu-item}}
+    {{/paper-item}}
+    {{paper-divider}}
+    {{#paper-item}}
+      {{#paper-menu-item}}
+        {{paper-icon "question answer" class="md-menu-align-target"}}
+        <div class="md-list-item-text">Kontakti nin</div>
+      {{/paper-menu-item}}
+    {{/paper-item}}
+  {{/paper-list}}
+{{/paper-content}}
